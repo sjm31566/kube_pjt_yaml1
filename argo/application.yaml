@@ -9,7 +9,7 @@ spec:
     namespace: dev
     server: https://kubernetes.default.svc
   source:
-    repoURL: https://github.com/you/k8s-manifests.git
+    repoURL: https://github.com/sjm31566/kube_pjt_yaml1.git
     targetRevision: HEAD
     path: .
   syncPolicy:
