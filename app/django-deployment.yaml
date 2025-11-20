@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:
+metadata: 
   name: django-app
   namespace: dev
 spec:
@@ -13,9 +13,11 @@ spec:
       labels:
         app: django-app
     spec:
+      nodeSelector:
+        kubernetes.io/hostname: kube-node001
       containers:
         - name: django
-          image: you/django-app:latest   # Jenkins가 자동으로 update
+          image: sjm31566/djangoapp:latest   # Jenkins가 자동으로 update
           ports:
             - containerPort: 8000
           env:

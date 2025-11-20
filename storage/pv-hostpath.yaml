@@ -11,3 +11,11 @@ spec:
   storageClassName: local-storage
   hostPath:
     path: /data/postgres
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - kube-node001
