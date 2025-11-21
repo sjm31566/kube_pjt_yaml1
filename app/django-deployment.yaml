@@ -17,7 +17,7 @@ spec:
         kubernetes.io/hostname: kube-node001
       containers:
         - name: django
-          image: sjm31566/djangoapp   # Jenkins가 자동으로 update
+          image: sjm31566/djangoapp:${IMAGE_TAG}   # Jenkins가 자동으로 update
           ports:
             - containerPort: 8000
           env:
