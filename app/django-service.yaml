@@ -4,7 +4,7 @@ metadata:
   name: django-service
   namespace: dev
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: django-app
   ports:
